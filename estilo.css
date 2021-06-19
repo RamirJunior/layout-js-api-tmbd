@@ -1,0 +1,257 @@
+body {
+    background: url(imgs/bg-body2.jpg);
+}
+
+.header {
+    z-index: 999;
+    position: fixed;
+    margin-top: 20px;
+    border-radius: 0px 60px 60px 0px;
+    width: 800px;
+    background: url(imgs/bg-menu.jpg);
+    background-position: 0px -250px;
+    padding: 20px 40px 20px 40px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 1);
+    -moz-box-shadow: 0px 0px 30px 30px rgba(50, 50, 50, 1);
+    box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 1);
+}
+
+.header a {
+    color: white;
+}
+
+.header a:hover {
+    color: #ffa600;
+}
+
+.search-form {
+    display: none;
+}
+
+.logo {
+    width: 100%;
+}
+
+.footer {
+    background: url(imgs/fundo_menu.png);
+    color: #bdbdbd;
+    padding: 20px;
+    -webkit-box-shadow: 30px 0px 0px 0px rgba(50, 50, 50, 1);
+    -moz-box-shadow: 30px 0px 0px 30px rgba(50, 50, 50, 1);
+    box-shadow: 30px 0px 0px 0px rgba(50, 50, 50, 1);
+}
+
+
+/* Seção de regras campo pesquisa do Header*/
+
+#custom-search-input {
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input {
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button {
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover {
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#destaque {
+    padding-top: 120px;
+}
+
+
+/* Seção da lista de filmes */
+
+.lista-filmes .filme {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    min-height: 400px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+}
+
+.lista-filmes .filme img {
+    width: 250px;
+    height: 350px;
+}
+
+.lista-filmes .filme:hover {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+}
+
+.lista-filmes .filme h6 {
+    margin-top: 1em;
+}
+
+.lista-filmes .filme p {
+    font-size: 0.8em;
+}
+
+
+/* Pagina do filme individual */
+
+#filme-capa {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#filme-capa::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient( 0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3323704481792717) 85%);
+}
+
+#filme-capa img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#filme-capa .info {
+    margin-top: 50vh;
+    position: relative;
+    color: #ffffffbb;
+    padding: 2rem;
+    max-width: 700px;
+    font-size: 1.3rem;
+}
+
+#filme-capa .info h1 {
+    margin-bottom: 2rem;
+    font-size: 5rem;
+}
+
+#filme-capa .classificacao {
+    margin-bottom: 1rem;
+    font-size: 0.8em;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:600px) {
+    .lista-filmes .filme {
+        width: 280px;
+    }
+    .header {
+        z-index: 999;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .header nav {
+        display: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .header img {
+        width: 50%;
+    }
+    .search-form {
+        padding: 0px 40px;
+        display: block;
+    }
+    .search-form .form-group {
+        float: right !important;
+        transition: all 0.35s, border-radius 0s;
+        width: 100%;
+        height: 40px;
+        background-color: #fff;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+        border-radius: 25px;
+        border: 1px solid #ccc;
+    }
+    .search-form .form-group input.form-control {
+        padding-right: 20px;
+        border: 0 none;
+        background: transparent;
+        box-shadow: none;
+        display: block;
+    }
+    .search-form .form-group input.form-control::-webkit-input-placeholder {
+        display: none;
+    }
+    .search-form .form-group input.form-control:-moz-placeholder {
+        /* Firefox 18- */
+        display: none;
+    }
+    .search-form .form-group input.form-control::-moz-placeholder {
+        /* Firefox 19+ */
+        display: none;
+    }
+    .search-form .form-group input.form-control:-ms-input-placeholder {
+        display: none;
+    }
+    .search-form .form-group input.form-control-feedback {
+        position: absolute;
+        top: -1px;
+        right: -2px;
+        z-index: 2;
+        display: block;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        color: #3596e0;
+        left: initial;
+        font-size: 14px;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer img {
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:769px) {
+    .header {
+        font-size: 11px;
+    }
+    .header img {
+        width: 100%;
+    }
+    #custom-search-input {
+        float: right;
+        width: 300px;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer img {
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+    }
+}

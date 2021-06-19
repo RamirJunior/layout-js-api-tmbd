@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="imagem/png" href="imgs/icon_wdf.png" />
+    <title>Home | Portal WD Films</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header class="container-fluid header">
+        <!-- SEÇÃO CABEÇALHO -->
+        <section class="row">
+            <div class="col-lg-2 col-md-3 col-sm-12">
+                <a href="index.html">
+                    <img src="imgs/logo_.png" title="WD Films - O maior de portal de filmes do Brasil!" class="logo">
+                </a>
+            </div>
+
+            <div class="col-lg-10 col-md-9 col-sm-12">
+
+                <!-- campo de pesquisa padrão-->
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="form-control input-lg" placeholder="Buscar filmes" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-info btn-lg" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section id="destaque" class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="d-flex justify-content-between mb-4">
+                        <h2>
+                            Resultados para:
+                            <i id="parametro"></i>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row mb-4 lista-filmes"></div>
+
+        </div>
+    </section>
+
+    <footer class="container-fluid footer">
+        <div class="row align-items-center">
+            <div class="col-lg-9 col-md-10 col-sm-12">
+                <p class="text-center">Desenvolvido por Ramir Junior <a style="text-decoration: none;color: #fff;" target="_blank" href="https://www.instagram.com/junior_rbeiro"><b>@junior_rbeiro</b></a> | Copyright 2021 - Desenvolvimento de Interfaces Web | <b>ICEI PUC
+                        Minas</b></p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12">
+                <a href="index.html">
+                    <img src="imgs/logo_.png" title="WD Films - O melhor portal de filmes do Brasil!" alt="logo WDFilms" class="logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
